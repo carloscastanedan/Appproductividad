@@ -1,0 +1,17 @@
+{
+  "name": "app-productividad",
+  "version": "1.0.0",
+  "description": "app para mejorar la productividad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "javascrips",
+    "es6"
+  ],
+  "author": "carloscastanedan@gmail.com",
+  "license": "ISC"
+}
