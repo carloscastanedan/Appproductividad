@@ -4,7 +4,11 @@
   "description": "app para mejorar la productividad",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean & SET NODE_ENV=development && SET BABEL_ENV=development && babel-node src/server",
+    "build": "webpack --config ./webpack/webpack.prod.js",
+    "production": "SET NODE_ENV=production && SET BABEL_ENV=production & npm run build & babel-node src/server",
+    "clean": "rimraf dist/"
   },
   "keywords": [
     "react",
@@ -13,5 +17,36 @@
     "es6"
   ],
   "author": "carloscastanedan@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.6",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.18.0",
+    "eslint-plugin-react": "^7.6.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "open": "0.0.5",
+    "uglifyjs-webpack-plugin": "^1.2.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-middleware": "^2.0.5",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1",
+    "webpack-middleware": "^1.5.1"
+  }
 }
