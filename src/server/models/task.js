@@ -8,4 +8,4 @@ const TaskSchema = new Schema({
   duration: { type: Date, default: 0 }
 })
 
-module.export = mongoose.model('Todo', TaskSchema)
+module.export = mongoose.model('Task', TaskSchema)

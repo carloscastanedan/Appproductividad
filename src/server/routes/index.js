@@ -1,6 +1,6 @@
 import express from 'express'
 import userCtrl from '../controllers/user'
-import taskCtrl from '../controllers/activity'
+import taskCtrl from '../controllers/task'
 import auth from '../middlewares/auth'
 
 const api = express.Router()
