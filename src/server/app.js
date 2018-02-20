@@ -2,9 +2,10 @@
 import express from 'express'
 import webpack from 'webpack'
 import path from 'path'
+import bodyParser from 'body-parser'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
-import bodyParser from 'body-parser'
+
 
 //Assets
 import webpackConfigDev from '../../webpack/webpack.dev'
@@ -16,7 +17,7 @@ const app = express()
 
 //Determina Environment
 const isDevelopment = process.env.NODE_ENV !== 'production '
-
+console.log(`${process.env.NODE_ENV}r`)
 if (isDevelopment)
 {
   const webpackCompiler = webpack(webpackConfigDev)
@@ -25,6 +26,7 @@ if (isDevelopment)
 }
 else
 {
+  console.log('Hola')
   const webpackCompiler = webpack(webpackConfigProd)
 }
 
@@ -37,6 +39,5 @@ app.use(bodyParser.json())
 
 //Se asigna router
 app.use('/', api)
-
 
 export default app

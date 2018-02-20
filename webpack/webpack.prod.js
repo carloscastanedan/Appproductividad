@@ -1,8 +1,9 @@
- import merge from 'webpack-merge'
- import common from '../webpack.common.js'
- import webpack from 'webpack'
+//Dependencies
+import webpack from 'webpack'
+import common from '../webpack.common.js'
+import merge from 'webpack-merge'
 
- module.exports = merge(common,
+module.exports = merge(common,
   {
    plugins:
    [

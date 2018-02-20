@@ -5,6 +5,10 @@
         "develoment":
         {
             "presets": ["react-hmre"]
-        }
+        },
+        "production":
+        {
+          "presets": ["react-optimize"]
+        },
     }
 }

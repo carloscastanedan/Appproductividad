@@ -1,17 +1,21 @@
+//Dependencies
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, browserHistory,  Route, Switch } from 'react-router-dom'
 
 //Assets
-import FilterProductTable from './components/lista/filter-product-data'
+import About from './components/About'
+import Contact from './components/Contact'
+import Home from './components/Home'
+import Page404 from './components/Page404'
 
-let PRODUCTS =
- [
-{category: "Sporting Goods", price: "$49.90", stocked: true, name: "Football"},
-{category: "Sporting Goods", price: "$9.99", stocked: true, name: "Baseball"},
-{category: "Sporting Goods", price: "$29.99", stocked: false, name: "Basketball"},
-{category: "Electronics", price: "$99.99", stocked: true, name: "iPod Touch"},
-{category: "Electronics", price: "$399.90", stocked: false, name: "iPhone 50"},
-{category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7"}
-];
-
-ReactDOM.render(<FilterProductTable products={ PRODUCTS } />, document.getElementById('root'));
+ReactDOM.render(
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/contact" component={Contact} />
+      <Route component={Page404} />
+    </Switch>
+  </Router>,
+  document.getElementById('root'));
