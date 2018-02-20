@@ -9,12 +9,12 @@ function getTasks(req, res)
       res.status(500).send({ message: `Error al realizar la petición:${err}` })
       return
     }
-    if(!taks)
+    if(taks.length == 0)
     {
       res.status(404).send({ message: 'Aún no tinenes Tareas '})
       return
     }
-    res.status(200).send({ task })
+    res.status(200).send({ taks })
   })
 }
 
@@ -31,6 +31,7 @@ function getTask(req, res)
    if(!task)
    {
      res.status(404).send({ message: 'No existe la tarea '})
+     return
    }
    res.status(200).send({ task })
  })
@@ -38,8 +39,6 @@ function getTask(req, res)
 
 function saveTask(req, res)
 {
-  console.log(req.body)
-
   let task = new Task()
   task.name = req.body.name,
   task.description = req.body.description,
@@ -60,7 +59,7 @@ function updateTask(req, res)
 {
   let taskId = req.params.taskId
   let update = req.body
-  Task.findByIdAndUpdate(productId, update, (err, taskUpdate) => {
+  Task.findByIdAndUpdate(taskId, update, (err, taskUpdate) => {
     if(err)
     {
       res.status(500).send({ message: `Error al actualizar la tarea:${err}` })
@@ -71,12 +70,12 @@ function updateTask(req, res)
 
 function delelteTask(req, res)
 {
-   let taskId = req.params.productId
+   let taskId = req.params.taskId
 
    Task.findById(taskId, (err, task) =>{
      if(err)
      {
-       res.status(500).send({ message: `Error al eliminar la tarea:${err }` })
+        res.status(500).send({ message: `Error al eliminar la tarea:${err }` })
      }
 
      task.remove(err => {

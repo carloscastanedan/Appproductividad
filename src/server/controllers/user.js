@@ -1,16 +1,16 @@
 //Assets
 import User from '../models/user'
-import service from '../services/'
+import service from '../services/token'
 
 function signUp(req, res)
 {
   let user = new User()
-  user.email = req.body.email
+  user.email = req.body.email,
   user.displayName = req.body.displayName
 
   user.save((err) => {
     if(err)
-      res.status(500).send({ message: `Error al creac Usruario:${err}` })
+      res.status(500).send({ message: `Error al crear Usruario:${err}` })
 
     return res.status(200).send({ token: service.createToken(user) })
   })
@@ -19,6 +19,7 @@ function signUp(req, res)
 function signIn(req, res)
 {
   User.find({ email: req.body.email }, (err, user) => {
+    console.log(user)
     if(err)
     {
       res.status(500).send({ message: `Error:${err}` })

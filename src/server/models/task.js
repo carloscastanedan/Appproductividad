@@ -1,11 +1,12 @@
-import mongoose from 'mongoose'
+import mongoose, { Schema } from 'mongoose'
 
 const TaskSchema = new Schema({
   name: String,
   description: String,
   active: Boolean,
   color: String,
-  duration: { type: Date, default: 0 }
+  duration: Number,
+  status: { type: String, enum:['complete', 'pending']}
 })
 
-module.export = mongoose.model('Task', TaskSchema)
+module.exports = mongoose.model('Task', TaskSchema)

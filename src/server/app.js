@@ -4,10 +4,12 @@ import webpack from 'webpack'
 import path from 'path'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
+import bodyParser from 'body-parser'
+
 //Assets
 import webpackConfigDev from '../../webpack/webpack.dev'
 import webpackConfigProd from '../../webpack/webpack.prod'
-
+import api from './routes'
 
 // Express api
 const app = express()
@@ -28,6 +30,13 @@ else
 
 //Ficheros Estaticos
 app.use(express.static(path.resolve(__dirname, '../../dist')))
+
+//Configuración BodyParser
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+//Se asigna router
+app.use('/', api)
 
 
 export default app
