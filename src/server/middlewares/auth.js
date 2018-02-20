@@ -1,4 +1,5 @@
-import services from '../services/token'
+//Assets
+import services from '../../services/token'
 
 function isAuth(req, res, next)
 {

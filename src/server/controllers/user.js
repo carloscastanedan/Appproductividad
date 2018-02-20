@@ -1,6 +1,6 @@
 //Assets
 import User from '../models/user'
-import service from '../services/token'
+import service from '../../services/token'
 
 function signUp(req, res)
 {

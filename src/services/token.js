@@ -1,7 +1,7 @@
 //Dependencies
 import jwt from 'jwt-simple'
 import moment from 'moment'
-import config from '../../../config'
+import config from '../../config'
 
 function createToken(user)
 {
