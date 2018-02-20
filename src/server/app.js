@@ -17,7 +17,7 @@ const app = express()
 
 //Determina Environment
 const isDevelopment = process.env.NODE_ENV !== 'production '
-console.log(`${process.env.NODE_ENV}r`)
+
 if (isDevelopment)
 {
   const webpackCompiler = webpack(webpackConfigDev)
@@ -26,7 +26,6 @@ if (isDevelopment)
 }
 else
 {
-  console.log('Hola')
   const webpackCompiler = webpack(webpackConfigProd)
 }
 

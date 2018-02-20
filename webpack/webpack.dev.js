@@ -1,6 +1,6 @@
- import webpack from 'webpack'
- import merge from 'webpack-merge'
- import common from '../webpack.common.js'
+ const webpack = require('webpack')
+ const merge = require( 'webpack-merge')
+ const common =  require('../webpack.common.js')
 
  module.exports = merge(common, {
   entry:

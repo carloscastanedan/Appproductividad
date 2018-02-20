@@ -1,7 +1,9 @@
 //Dependencies
-import webpack from 'webpack'
-import common from '../webpack.common.js'
-import merge from 'webpack-merge'
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+
+//Assets
+const common = require('../webpack.common.js')
 
 module.exports = merge(common,
   {

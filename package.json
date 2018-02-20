@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run clean & SET NODE_ENV=development && SET BABEL_ENV=development && babel-node src/server",
     "build": "webpack --config ./webpack/webpack.prod.js",
-    "production": "SET NODE_ENV=production && SET BABEL_ENV=production & npm run build & babel-node src/server",
+    "production": "SET NODE_ENV=production && SET BABEL_ENV=production & npm run build & babel-node src/server  ",
+    "start": "npm run clean & SET NODE_ENV=development && SET BABEL_ENV=development && babel-node src/server",
     "clean": "rimraf dist/"
   },
   "keywords": [
