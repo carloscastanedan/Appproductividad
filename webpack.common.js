@@ -9,7 +9,7 @@ module.exports = {
    plugins:
     [
     new ExtractTextPlugin('bundle.css'),
-    new HtmlWebpackPlugin({ title: 'Production', template: 'src/public/index.html' }),
+    new HtmlWebpackPlugin({ title: 'App', template: 'src/public/index.html' }),
     ],
    output:
    {
