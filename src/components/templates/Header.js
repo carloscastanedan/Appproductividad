@@ -14,9 +14,14 @@ class Header extends Component {
     const { title } = this.props;
     return (
       <header>
-        <div className="Logo">
-          <h2>{title}</h2>
-        </div>
+        <nav>
+          <div className="nav-wrapper teal">
+            <a href="#!" className="brand-logo"><i className="material-icons">accessibility</i>Logo</a>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li><a href="#">Registrarse</a></li>
+              </ul>
+          </div>
+        </nav>
       </header>
     )
   }

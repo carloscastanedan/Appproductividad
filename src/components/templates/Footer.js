@@ -10,9 +10,11 @@ class Footer extends Component {
           <div className="container">
                 <h5 className="white-text">App que mejora tu productividad</h5>
                 <p className="grey-text text-lighten-4">
-                  Esta aplicacón web te permite registrar tareas y tener un registro del
-                  tiempo que te toma realizarlas, con la finalidad de mejorar tu productividad
-                  además de un grafico que muestra tus histotial.
+                  Esta aplicación te ayuda a mejorar tu productividad en las tareas que realizas en el día a día.
+                  ¿Como lo hace? Registra una tarea y especifica un tiempo pertinente para realizarla,
+                  un cronometro hacía atrás te indice el tiempo restante.
+                  LLeva un historial de las actividades realizadas
+                  Ponte metas y cumplelas!!
                 </p>
           </div>
           <div className="footer-copyright">
