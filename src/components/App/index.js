@@ -20,7 +20,7 @@ class App extends Component
     const { children } = this.props
     return(
     <div className="app">
-      <Header content="Registrate"/>
+      <Header title="Registrate"/>
       <Content body={ children } />
       <Footer />
     </div>

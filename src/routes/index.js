@@ -4,8 +4,12 @@ import { Route, Switch } from 'react-router-dom'
 
 // Components
 import App from '../components/App'
-import About from '../components/About'
+import SignIn from '../components/SignIn'
+import SignUp from '../components/SignUp'
 import Home from '../components/Home'
+
+
+import About from '../components/About'
 import Contact from '../components/Contact'
 import Page404 from '../components/Page404'
 
@@ -17,9 +21,9 @@ class AppRoutes extends Component
     return(
     <App>
       <Switch>
-        <Route exact path="/about" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={ SignIn }/>
+        <Route exact path="/signup" component={ SignUp } />
+        <Route exact path="/home" component={ Home } />
         <Route component={Page404} />
       </Switch>
     </App>

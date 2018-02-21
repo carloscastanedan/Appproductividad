@@ -12,7 +12,7 @@ class Content extends Component {
   {
     const { body } = this.props
     return (
-      <main>
+      <main className="valign-wrapper">
         { body }
       </main>
     )

@@ -37,6 +37,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //Se asigna router
-app.use('/', api)
+app.use('/api', api)
 
 export default app

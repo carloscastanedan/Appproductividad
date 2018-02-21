@@ -14,7 +14,5 @@ api.delete('/task/:taskId', taskCtrl.delelteTask)
 api.post('/signUp', userCtrl.signUp)
 api.post('/signIn', userCtrl.signIn)
 
-//Se envía tráfico a react
-api.get('/', (req, res) => { res.sendFile('index.html') });
 
 module.exports = api
