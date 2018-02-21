@@ -39,4 +39,9 @@ app.use(bodyParser.json())
 //Se asigna router
 app.use('/api', api)
 
+//Redirige el tráfico a react
+app.use((req, res,next) => {
+  res.sendFile(path.join(__dirname,'../../dist/index.html'))
+})
+
 export default app

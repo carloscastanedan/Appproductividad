@@ -7,6 +7,7 @@ import App from '../components/App'
 import SignIn from '../components/SignIn'
 import SignUp from '../components/SignUp'
 import Home from '../components/Home'
+import CreateTask from '../components/new'
 
 
 import About from '../components/About'
@@ -24,6 +25,7 @@ class AppRoutes extends Component
         <Route exact path="/" component={ SignIn }/>
         <Route exact path="/signup" component={ SignUp } />
         <Route exact path="/home" component={ Home } />
+        <Route exact path="/new" component={ CreateTask } />
         <Route component={Page404} />
       </Switch>
     </App>

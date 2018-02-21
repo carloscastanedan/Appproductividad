@@ -39,7 +39,7 @@ class Home extends Component {
                   </div>
               </div>
             </div>
-            <Link to="/home">Home</Link>
+            <Link to="/new">New Task</Link>
           </div>
         </div>
       </div>
