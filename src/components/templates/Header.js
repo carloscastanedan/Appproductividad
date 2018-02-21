@@ -16,7 +16,7 @@ class Header extends Component {
       <header>
         <nav>
           <div className="nav-wrapper teal">
-            <a href="#!" className="brand-logo"><i className="material-icons">accessibility</i>Productivity</a>
+            <a href="#!" className="brand-logo"><i className="material-icons hide-on-med-and-down">accessibility</i>Productivity</a>
               <ul id="nav-mobile" className="right hide-on-med-and-down">
                 <li><a href="#">{ title }</a></li>
               </ul>
